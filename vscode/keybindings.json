@@ -3,5 +3,9 @@
   {
     "key": "ctrl+shift+t",
     "command": "toggleVim"
+  },
+  {
+    "key": "cmd+k shift+cmd+o",
+    "command": "workbench.action.openSettingsJson"
   }
 ]

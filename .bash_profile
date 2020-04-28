@@ -1,6 +1,7 @@
 alias vi=nvim
 alias be='bundle exec'
-alias vR="nvim -R"
+alias vr="nvim -R"
+alias g='git'
 export XDG_CONFIG_HOME="$HOME/.config"
 
 today=`date ""+%Y%m%d`

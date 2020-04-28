@@ -1,102 +1,153 @@
 {
-    // Enable per-language
-    "[javascript]": {
-        "editor.formatOnSave": true
+  "editor.multiCursorModifier": "ctrlCmd", // マウスでの複数選択時の修飾キーを変更
+  "editor.renderControlCharacters": true, // 制御文字を表示
+  "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
+  "editor.renderWhitespace": "all", // 半角スペースを常に表示
+  "editor.snippetSuggestions": "top", // Emmet などのスニペット候補を優先して表示
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2, // タブのサイズ変更
+  "editor.wordWrap": "on", // エディターの幅で折り返し
+  "emmet.showSuggestionsAsSnippets": true, // Emmet の候補を表示
+  "emmet.triggerExpansionOnTab": true, // TAB キーで Emmet を展開できるようにする
+  "files.exclude": { // エクスプローラーから非表示にするファイル
+    "**/*.map": true,
+    "**/node_modules": true
+  },
+  "files.insertFinalNewline": true, // ファイルの保存時に末尾を改行
+  "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
+  "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false // Markdown のファイルは行末の空白をトリミングしない
+  },
+  "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
+  "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
+  "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
+  "html.format.wrapLineLength": 0, // 行の文字数制限を無くし自動で改行させない
+  "search.exclude": { // 検索対象外にするファイル設定（ files.exclude のファイルも含む）
+    "**/tmp": true
+  },
+  "window.openFoldersInNewWindow": "on", // 新規ワークスペースを別ウインドウで開く
+  "window.title": "${activeEditorMedium}${separator}${rootName}", // ウインドウ上部に表示する文字列の設定
+  "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
+  "workbench.editor.tabSizing": "shrink", // タブの表示設定
+  "workbench.startupEditor": "none", // Welcome Page を表示しない
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
-    "editor.minimap.renderCharacters": false, // ミニマップの表示文字をブロックに変更
-    "editor.minimap.showSlider": "always", // 表示領域をミニマップで常にハイライト
-    "editor.multiCursorModifier": "ctrlCmd", // マウスでの複数選択時の修飾キーを変更
-    "editor.renderControlCharacters": true, // 制御文字を表示
-    "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
-    "editor.renderWhitespace": "all", // 半角スペースを常に表示
-    "editor.snippetSuggestions": "top", // Emmet などのスニペット候補を優先して表示
-    "editor.tabSize": 2, // タブのサイズ変更
-    "editor.wordWrap": "on", // エディターの幅で折り返し
-    "emmet.showSuggestionsAsSnippets": true, // Emmet の候補を表示
-    "emmet.triggerExpansionOnTab": true, // TAB キーで Emmet を展開できるようにする
-    "emmet.variables": { // Emmet で展開される HTML の言語を変更
-        "lang": "ja"
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
-    "files.exclude": { // エクスプローラーから非表示にするファイル
-        "**/*.map": true,
-        "**/node_modules": true
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
     },
-    "files.insertFinalNewline": true, // ファイルの保存時に末尾を改行
-    "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
-    "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
-    "[markdown]": {
-        "files.trimTrailingWhitespace": false // Markdown のファイルは行末の空白をトリミングしない
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup",
+      ]
     },
-    "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
-    "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
-    "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
-    "html.format.wrapLineLength": 0, // 行の文字数制限を無くし自動で改行させない
-    "search.exclude": { // 検索対象外にするファイル設定（ files.exclude のファイルも含む）
-        "**/tmp": true
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup",
+      ]
     },
-    "window.openFoldersInNewWindow": "on", // 新規ワークスペースを別ウインドウで開く
-    "window.title": "${activeEditorMedium}${separator}${rootName}", // ウインドウ上部に表示する文字列の設定
-    "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
-    "workbench.editor.tabSizing": "shrink", // タブの表示設定
-    "workbench.startupEditor": "none",
-    "workbench.editor.showTabs": true,
-    "window.zoomLevel": 0, // Welcome Page を表示しない
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "vim.sneak": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-      },
-      {
-        "before": ["<C-n>"],
-        "commands": [":nohl"]
-      },
-      {
-        "before": [";"],
-        "after": [":"]
-      },
-      {
-        "before": ["J"],
-        "commands": [
-          "workbench.action.previousEditorInGroup",
-        ]
-      },
-      {
-        "before": ["K"],
-        "commands": [
-          "workbench.action.nextEditorInGroup",
-        ]
-      },
-      {
-        "before": ["s","b"],
-        "commands": [
-          "editor.action.marker.prevInFiles",
-        ]
-      },
-      {
-        "before": ["s","n"],
-        "commands": [
-          "editor.action.marker.nextInFiles",
-        ]
-      }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "cursorHome",
+      ]
     },
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/local/bin/nvim"
+    {
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        "cursorEnd",
+      ]
+    },
+    {
+      "before": [
+        "t",
+        "vim.handleKeys"
+      ],
+      "after": [
+        "i",
+        "vim.handleKeys",
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "m",
+        "b"
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles",
+      ]
+    },
+    {
+      "before": [
+        "m",
+        "n"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles",
+      ]
+    },
+    {
+      "before": ["<leader>", "%"],
+      "commands": [
+        {
+          "command": "editor.emmet.action.matchTag"
+        }
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "workbench.editor.showTabs": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "editor.fontSize": 13,
+  "window.zoomLevel": 0
 }
