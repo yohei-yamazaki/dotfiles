@@ -1,0 +1,14 @@
+artdiniz.quitcontrol-vscode
+CoenraadS.bracket-pair-colorizer-2
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+GitHub.vscode-pull-request-github
+jpoissonnier.vscode-styled-components
+mikestead.dotenv
+ms-azuretools.vscode-docker
+ms-vscode.Go
+oderwat.indent-rainbow
+Orta.vscode-jest
+Prisma.vscode-graphql
+vscodevim.vim
+yzhang.markdown-all-in-one
