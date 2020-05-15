@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=(.bashrc .bash_profile)
+DOT_FILES=(.bashrc .bash_profile .zshrc)
 VS_CODE_FILES=(settings.json keybindings.json)
 NVIM_FILES=(init.nvim dein.toml dein_lazy.toml)
 

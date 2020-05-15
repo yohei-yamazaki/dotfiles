@@ -1,4 +1,5 @@
 {
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "editor.multiCursorModifier": "ctrlCmd", // マウスでの複数選択時の修飾キーを変更
   "editor.renderControlCharacters": true, // 制御文字を表示
   "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
@@ -149,5 +150,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.fontSize": 13,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "files.autoGuessEncoding": true
 }
