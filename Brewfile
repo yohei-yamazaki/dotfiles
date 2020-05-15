@@ -1,0 +1,15 @@
+cask_args appdir: "/Applications"cask_args appdir: "/Applications"cask_args appdir: "/Applications"
+
+brew "bash-completion"
+brew "node"
+brew "fzf"
+brew "yarn"
+brew "unar"
+brew "zsh-completions"
+brew "neovim"
+
+cask "docker"
+cask "firefox"
+cask "google-chrome"
+cask "shiftit"
+cask "visual-studio-code"
