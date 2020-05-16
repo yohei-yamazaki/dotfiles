@@ -152,6 +152,15 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
+call dein#add('Shougo/deoplete.nvim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case=1
+inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
+
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
   call dein#install()
